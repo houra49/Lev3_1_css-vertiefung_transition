@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+}
+#balls{
+    position: relative;
+}
+.ball1{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color:rgb(10, 41, 41);
+    position:absolute;
+}
+.ball2{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color:rgb(46, 160, 160);
+    position:absolute;
+    margin-top: 7%;
+    margin-left: 27%;
+    animation-duration: 15s;
+    animation-delay: 4s;
+    animation-name: hold;
+}
+.ball1 h1{
+    text-align:center;
+    padding-top: 30%;
+    color: #fff;
+}
+.ball1:hover{
+    animation-name: click;
+    animation-duration: 17s;
+}
+@keyframes click{
+    0%{
+        transform:translateX(1px)
+    }
+    25%{
+        transform:translateX(205px)
+    }
+    100%{
+        transform:translateX(205px)
+    }
+}
+@keyframes hold{
+    0%{
+        transform:translateX(210px)
+    }
+    25%{
+        transform:translateX(405px)
+    }
+    100%{
+        transform:translateX(405px) rotate3d(180deg)
+    }
+}
